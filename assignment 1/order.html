@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<title>Jzone Creations</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../../../other/pospro/mystyle.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="../assignment%202/stylesheet.css">
+<style>
+    html,body,h1,h2,h3,h4,h5 {font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";}
+
+    /* Style the search box */
+    #mySearch {
+        width: 82%;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        padding: .375rem .75rem;
+        border: 1px solid #ddd;
+        border-radius:.25rem;
+        transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+        margin-top: .25rem;
+    }
+</style>
+<body class="jcode-light-grey">
+
+<!-- Top container -->
+<div class="jcode-bar jcode-top jcode-blue jcode-large" style="z-index:4">
+    <button class="jcode-bar-item jcode-button jcode-hide-large jcode-hover-none jcode-hover-text-light-grey" onclick="jcode_open();"><i class="fa fa-bars"></i>  Menu</button>
+    <span class="jcode-bar-item jcode-left">Anon Labs</span>
+    <span class="jcode-centered"><input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search" title="Type in a category"></span>
+    <span class="jcode-bar-item jcode-right">Sign Out</span>
+</div>
+
+<!-- Sidebar/menu -->
+<nav class="jcode-sidebar jcode-collapse jcode-white jcode-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
+    <div class="jcode-container jcode-row">
+        <div class="jcode-col s4">
+            <img src="../../../images/bb.jpeg" class="jcode-circle jcode-margin-right" style="width:100%">
+        </div>
+        <div class="jcode-col s8 jcode-bar">
+            <span>Welcome, <strong>Jayani</strong></span><br>
+            <a href="#" class="jcode-bar-item jcode-button"><i class="fa fa-envelope"></i></a>
+            <a href="#" class="jcode-bar-item jcode-button"><i class="fa fa-user"></i></a>
+            <a href="#" class="jcode-bar-item jcode-button"><i class="fa fa-cog"></i></a>
+        </div>
+    </div>
+    <hr>
+    <div class="jcode-container">
+        <h5>Dashboard</h5>
+    </div>
+    <div class="jcode-bar-block">
+        <a href="#" class="jcode-bar-item jcode-button jcode-padding-16 jcode-hide-large jcode-dark-grey jcode-hover-black" onclick="jcode_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  Close Menu</a>
+        <a href="index.html" class="jcode-bar-item jcode-button jcode-padding jcode-blue"><i class="fa fa-users fa-fw"></i>  Overview</a>
+        <a href="customer.html" class="jcode-bar-item jcode-button jcode-padding"><i class="fa fa-user fa-fw"></i>  Customer</a>
+        <a href="item.html" class="jcode-bar-item jcode-button jcode-padding"><i class="fa fa-anchor fa-fw"></i>  Item</a>
+        <a href="order.html" class="jcode-bar-item jcode-button jcode-padding"><i class="fa fa-arrows fa-fw"></i>  Orders</a>
+        <a href="#" class="jcode-bar-item jcode-button jcode-padding"><i class="fa fa-bell fa-fw"></i>  Notification</a>
+        <a href="#" class="jcode-bar-item jcode-button jcode-padding"><i class="fa fa-bank fa-fw"></i>  General</a>
+        <a href="#" class="jcode-bar-item jcode-button jcode-padding"><i class="fa fa-history fa-fw"></i>  History</a>
+        <a href="#" class="jcode-bar-item jcode-button jcode-padding"><i class="fa fa-cog fa-fw"></i>  Settings</a><br><br>
+    </div>
+</nav>
+
+
+<!-- !PAGE CONTENT! -->
+<div class="jcode-main" style="margin-left:300px;margin-top:43px;">
+
+    <!-- Header -->
+    <header class="jcode-container">
+        <h5><b><i class="fa fa-user"></i> &nbsp;Order Management</b></h5>
+    </header>
+
+    <div class="jcode-row-padding jcode-margin-bottom">
+        <div class="jcode-center">
+            <div class="jcode-container jcode-cyan jcode-text-white jcode-padding-16">
+                <div class="jcode-left"><i class="fa fa-arrows jcode-xxxlarge"></i></div>
+                <div class="jcode-right">
+                    <h3>120</h3>
+                </div>
+
+                <div class="jcode-center"><h4>Orders</h4></div>
+            </div>
+        </div>
+        <br>    <div class="sub-content-area">
+        <div class="content_box" style="float: left">
+            <aside>Customer Details</aside>
+            <section>
+                <div class="form-group">
+                    <label class="form-label margined">Customer ID</label>
+                    <select id="cmb-cus" class="form-element form-select">
+                        <option>C001</option>
+                        <option>C002</option>
+                        <option>C003</option>
+                    </select>
+                    <button type="button" id="btn-new-cus" class="form-element form-btn btn-green">New Customer</button>
+                </div>
+                <div class="form-group">
+                    <label class="form-label seperate margined">Name</label>
+                    <input type="text" class="form-element form-text" style="width: calc(100% - 20px)">
+                </div>
+                <div class="form-group">
+                    <label class="form-label seperate margined">Address</label>
+                    <input type="text" class="form-element form-text" style="width: calc(100% - 20px)">
+                </div>
+
+            </section>
+        </div>
+        <div class="content_box" style="float: right">
+            <aside>Item Select</aside>
+            <section>
+                <div class="form-group">
+                    <label class="form-label margined">Item</label>
+                    <select id="cmb-item" class="form-element form-select">
+                        <option>Pen Drive</option>
+                        <option>Hard Disk</option>
+                        <option>DVD</option>
+                        <option>Power Cable</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-label margined">Price</label>
+                    <input type="text" class="form-element form-text input-on-res" style="width: calc(30% - 20px)">
+                    <label class="form-label margined">Quantity</label>
+                    <input type="text" class="form-element form-text input-on-res" style="width: calc(30% - 20px)">
+                </div>
+                <hr>
+                <h1 style="text-align: center; font-size:20px; font-weight: normal; margin: 0">Order Item</h1>
+                <hr>
+                <div class="form-group">
+                    <label class="form-label seperate margined">Order Quantity</label>
+                    <input type="text" class="form-element form-text" style="width: calc(100% - 20px)">
+                </div>
+                <div class="form-group">
+                    <label class="form-label seperate margined">Price</label>
+                    <input type="text" class="form-element form-text" style="width: calc(100% - 20px)">
+                </div>
+                <button type="button" class="form-element form-btn btn-red seperate" style="float: right; margin-right: 0">Place Order</button>
+                <div style="clear: both"></div>
+            </section>
+        </div>
+        <div class="content_box" style="float: left">
+            <aside>Invoice Details</aside>
+            <section>
+                <div class="form-group">
+                    <label class="form-label seperate margined">Order Date</label>
+                    <input type="date" class="form-element form-text" style="width: calc(100% - 20px)">
+                </div>
+                <div class="form-group">
+                    <label class="form-label seperate margined">Order ID</label>
+                    <input type="text" class="form-element form-text" style="width: calc(100% - 20px)">
+                </div>
+            </section>
+        </div>
+    </div>
+    <table class="form-table" cellspacing="2" cellpadding="10">
+        <thead>
+        <tr>
+            <th>Item Name</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Total</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        </tbody>
+    </table>
+    <div id="final_content">
+        <h3>Total : 00.0Rs/= </h3>
+        <div id="final_bar">
+            <table width="100%">
+                <tr>
+                    <td>
+                        <label class="form-label">Cash</label>
+                        <input type="text" class="form-element form-text">
+                    </td>
+                    <td>
+                        <label class="form-label">Balance</label>
+                        <input type="text" class="form-element form-text">
+                    </td>
+                    <td>
+                        <label class="form-label">Discount</label>
+                        <input type="text" class="form-element form-text">
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

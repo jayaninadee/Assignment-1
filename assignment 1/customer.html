@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<title>Jzone Creations</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../../../other/pospro/mystyle.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="../assignment%202/stylesheet.css">
+<style>
+    html,body,h1,h2,h3,h4,h5 {font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";}
+
+    /* Style the search box */
+    #mySearch {
+        width: 82%;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        padding: .375rem .75rem;
+        border: 1px solid #ddd;
+        border-radius:.25rem;
+        transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+        margin-top: .25rem;
+    }
+</style>
+<body class="jcode-light-grey">
+
+<!-- Top container -->
+<div class="jcode-bar jcode-top jcode-blue jcode-large" style="z-index:4">
+    <button class="jcode-bar-item jcode-button jcode-hide-large jcode-hover-none jcode-hover-text-light-grey" onclick="jcode_open();"><i class="fa fa-bars"></i>  Menu</button>
+    <span class="jcode-bar-item jcode-left">Anon Labs</span>
+    <span class="jcode-centered"><input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search" title="Type in a category"></span>
+    <span class="jcode-bar-item jcode-right">Sign Out</span>
+</div>
+
+<!-- Sidebar/menu -->
+<nav class="jcode-sidebar jcode-collapse jcode-white jcode-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
+    <div class="jcode-container jcode-row">
+        <div class="jcode-col s4">
+            <img src="../../../images/bb.jpeg" class="jcode-circle jcode-margin-right" style="width:100%">
+        </div>
+        <div class="jcode-col s8 jcode-bar">
+            <span>Welcome, <strong>Jayani</strong></span><br>
+            <a href="#" class="jcode-bar-item jcode-button"><i class="fa fa-envelope"></i></a>
+            <a href="#" class="jcode-bar-item jcode-button"><i class="fa fa-user"></i></a>
+            <a href="#" class="jcode-bar-item jcode-button"><i class="fa fa-cog"></i></a>
+        </div>
+    </div>
+    <hr>
+    <div class="jcode-container">
+        <h5>Dashboard</h5>
+    </div>
+    <div class="jcode-bar-block">
+        <a href="#" class="jcode-bar-item jcode-button jcode-padding-16 jcode-hide-large jcode-dark-grey jcode-hover-black" onclick="jcode_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  Close Menu</a>
+        <a href="index.html" class="jcode-bar-item jcode-button jcode-padding jcode-blue"><i class="fa fa-users fa-fw"></i>  Overview</a>
+        <a href="customer.html" class="jcode-bar-item jcode-button jcode-padding"><i class="fa fa-user fa-fw"></i>  Customer</a>
+        <a href="item.html" class="jcode-bar-item jcode-button jcode-padding"><i class="fa fa-anchor fa-fw"></i>  Item</a>
+        <a href="order.html" class="jcode-bar-item jcode-button jcode-padding"><i class="fa fa-arrows fa-fw"></i>  Orders</a>
+        <a href="#" class="jcode-bar-item jcode-button jcode-padding"><i class="fa fa-bell fa-fw"></i>  Notification</a>
+        <a href="#" class="jcode-bar-item jcode-button jcode-padding"><i class="fa fa-bank fa-fw"></i>  General</a>
+        <a href="#" class="jcode-bar-item jcode-button jcode-padding"><i class="fa fa-history fa-fw"></i>  History</a>
+        <a href="#" class="jcode-bar-item jcode-button jcode-padding"><i class="fa fa-cog fa-fw"></i>  Settings</a><br><br>
+    </div>
+</nav>
+
+
+<!-- !PAGE CONTENT! -->
+<div class="jcode-main" style="margin-left:300px;margin-top:43px;">
+
+    <!-- Header -->
+    <header class="jcode-container">
+        <h5><b><i class="fa fa-user"></i> &nbsp;Customer Management</b></h5>
+    </header>
+
+    <div class="jcode-row-padding jcode-margin-bottom">
+ <div class="jcode-center">
+            <div class="jcode-container jcode-orange jcode-text-white jcode-padding-16">
+                <div class="jcode-left"><i class="fa fa-users jcode-xxxlarge"></i></div>
+                <div class="jcode-right">
+                    <h3>50</h3>
+                </div>
+
+                <div class="jcode-center"><h4>Customers</h4></div>
+            </div>
+        </div>
+        <br>
+                <div class="sub-content-area">
+                    <div id="search-box-area">
+                        <label class="form-label" for="txtSearch"><span id="search-customer-txt">Search Customer :</span>
+                            <input id="txtSearch" type="text" placeholder="Input CID/Name/Address here" class="form-element form-text">
+                        </label>
+                        <select id="cmb-search" class="form-element form-select jcode-light-blue">
+                            <option>CID</option>
+                            <option>Name</option>
+                            <option>Address</option>
+                        </select>
+                        <button id="btn-search" type="button" class="form-element form-btn btn-blue">Search</button>
+                    </div>
+
+                    <div id="cus_btn">
+                        <button type="button" class="form-element form-btn btn-green">New</button>
+                        <button type="button" class="form-element form-btn btn-purple">View All </button>
+                    </div>
+                    <div style="clear: both"></div>
+                    <br>
+                    <table class="form-table" cellspacing="2" cellpadding="10">
+                        <thead>
+                        <tr>
+                            <th>CID</th>
+                            <th>Name</th>
+                            <th>Address</th>
+
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+
+                        </tr>
+                        </tbody>
+                    </table>
+                    <br>
+                    <div id="bottom-buttons">
+                        <button type="button" class="form-element form-btn btn-red">Delete</button>
+                        <button type="button" class="form-element form-btn btn-yellow">Edit</button>
+                        <button type="button" class="form-element form-btn btn-light-blue">Details</button>
+                        <button type="button" class="form-element form-btn btn-green">Clear</button>
+                    </div>
+                </div>
+
+        </div>
+
+
+</div>
+
+</body>
+</html>

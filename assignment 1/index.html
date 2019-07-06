@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<title>Jzone Creations</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../../../other/pospro/mystyle.css">
+<link rel="stylesheet" href="../assignment%202/stylesheet.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    html,body,h1,h2,h3,h4,h5 {font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";}
+
+    /* Style the search box */
+    #mySearch {
+        width: 82%;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        padding: .375rem .75rem;
+        border: 1px solid #ddd;
+        border-radius:.25rem;
+        transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+        margin-top: .25rem;
+    }
+</style>
+<body class="jcode-light-grey">
+
+<!-- Top container -->
+<div class="jcode-bar jcode-top jcode-blue jcode-large" style="z-index:4">
+
+    <span class="jcode-bar-item jcode-left">Anon Labs</span>
+    <span class="jcode-centered"><input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search" title="Type in a category"></span>
+    <span class="jcode-bar-item jcode-right">Sign Out</span>
+</div>
+
+<!-- Sidebar/menu -->
+<nav class="jcode-sidebar jcode-collapse jcode-white jcode-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
+    <div class="jcode-container jcode-row">
+        <div class="jcode-col s4">
+            <img src="../../../images/bb.jpeg" class="jcode-circle jcode-margin-right" style="width:100%">
+        </div>
+        <div class="jcode-col s8 jcode-bar">
+            <span>Welcome, <strong>Jayani</strong></span><br>
+            <a href="#" class="jcode-bar-item jcode-button"><i class="fa fa-envelope"></i></a>
+            <a href="#" class="jcode-bar-item jcode-button"><i class="fa fa-user"></i></a>
+            <a href="#" class="jcode-bar-item jcode-button"><i class="fa fa-cog"></i></a>
+        </div>
+    </div>
+    <hr>
+    <div class="jcode-container">
+        <h5>Dashboard</h5>
+    </div>
+    <div class="jcode-bar-block">
+        <a href="index.html" class="jcode-bar-item jcode-button jcode-padding jcode-blue"><i class="fa fa-users fa-fw"></i>  Overview</a>
+        <a href="customer.html" class="jcode-bar-item jcode-button jcode-padding"><i class="fa fa-user fa-fw"></i>  Customer</a>
+        <a href="item.html" class="jcode-bar-item jcode-button jcode-padding"><i class="fa fa-anchor fa-fw"></i>  Item</a>
+        <a href="order.html" class="jcode-bar-item jcode-button jcode-padding"><i class="fa fa-arrows fa-fw"></i>  Orders</a>
+        <a href="#" class="jcode-bar-item jcode-button jcode-padding"><i class="fa fa-bell fa-fw"></i>  Notification</a>
+        <a href="#" class="jcode-bar-item jcode-button jcode-padding"><i class="fa fa-bank fa-fw"></i>  General</a>
+        <a href="#" class="jcode-bar-item jcode-button jcode-padding"><i class="fa fa-history fa-fw"></i>  History</a>
+        <a href="#" class="jcode-bar-item jcode-button jcode-padding"><i class="fa fa-cog fa-fw"></i>  Settings</a><br><br>
+    </div>
+</nav>
+
+
+
+<!-- !PAGE CONTENT! -->
+<div class="jcode-main" style="margin-left:300px;margin-top:43px;">
+
+    <!-- Header -->
+    <header class="jcode-container" style="padding-top:22px">
+        <h5><b><i class="fa fa-dashboard"></i> My Dashboard</b></h5>
+    </header>
+
+    <div class="jcode-row-padding jcode-margin-bottom">
+        <div class="jcode-quarter">
+            <div class="jcode-container jcode-red jcode-padding-16">
+                <div class="jcode-left"><i class="fa fa-comment jcode-xxxlarge"></i></div>
+                <div class="jcode-right">
+                    <h3>52</h3>
+                </div>
+                <div class="jcode-clear"></div>
+                <h4>Messages</h4>
+            </div>
+        </div>
+        <div class="jcode-quarter">
+            <div class="jcode-container jcode-blue jcode-padding-16">
+                <div class="jcode-left"><i class="fa fa-eye jcode-xxxlarge"></i></div>
+                <div class="jcode-right">
+                    <h3>99</h3>
+                </div>
+                <div class="jcode-clear"></div>
+                <h4>Views</h4>
+            </div>
+        </div>
+        <div class="jcode-quarter">
+            <div class="jcode-container jcode-teal jcode-padding-16">
+                <div class="jcode-left"><i class="fa fa-share-alt jcode-xxxlarge"></i></div>
+                <div class="jcode-right">
+                    <h3>23</h3>
+                </div>
+                <div class="jcode-clear"></div>
+                <h4>Shares</h4>
+            </div>
+        </div>
+        <div class="jcode-quarter">
+            <div class="jcode-container jcode-orange jcode-text-white jcode-padding-16">
+                <div class="jcode-left"><i class="fa fa-users jcode-xxxlarge"></i></div>
+                <div class="jcode-right">
+                    <h3>50</h3>
+                </div>
+                <div class="jcode-clear"></div>
+                <h4>Users</h4>
+            </div>
+        </div>
+    </div>
+
+    <div class="jcode-panel">
+        <div class="jcode-row-padding" style="margin:0 -16px">
+            <div class="jcode-third">
+                <h5>Regions</h5>
+                <img src="../../../images/regions.png" style="width:100%" alt="Google Regional Map">
+            </div>
+            <div class="jcode-twothird">
+                <h5>Feeds</h5>
+                <table class="jcode-table jcode-striped jcode-white">
+                    <tr>
+                        <td><i class="fa fa-user jcode-text-blue jcode-large"></i></td>
+                        <td>New record, over 90 views.</td>
+                        <td><i>10 mins</i></td>
+                    </tr>
+                    <tr>
+                        <td><i class="fa fa-bell jcode-text-red jcode-large"></i></td>
+                        <td>Database error.</td>
+                        <td><i>15 mins</i></td>
+                    </tr>
+                    <tr>
+                        <td><i class="fa fa-users jcode-text-yellow jcode-large"></i></td>
+                        <td>New record, over 40 users.</td>
+                        <td><i>17 mins</i></td>
+                    </tr>
+                    <tr>
+                        <td><i class="fa fa-comment jcode-text-red jcode-large"></i></td>
+                        <td>New comments.</td>
+                        <td><i>25 mins</i></td>
+                    </tr>
+                    <tr>
+                        <td><i class="fa fa-bookmark jcode-text-blue jcode-large"></i></td>
+                        <td>Check transactions.</td>
+                        <td><i>28 mins</i></td>
+                    </tr>
+                    <tr>
+                        <td><i class="fa fa-laptop jcode-text-red jcode-large"></i></td>
+                        <td>CPU overload.</td>
+                        <td><i>35 mins</i></td>
+                    </tr>
+                    <tr>
+                        <td><i class="fa fa-share-alt jcode-text-green jcode-large"></i></td>
+                        <td>New shares.</td>
+                        <td><i>39 mins</i></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="jcode-container">
+        <h5>General Stats</h5>
+        <p>New Visitors</p>
+        <div class="jcode-grey">
+            <div class="jcode-container jcode-center jcode-padding jcode-green" style="width:25%">+25%</div>
+        </div>
+
+        <p>New Users</p>
+        <div class="jcode-grey">
+            <div class="jcode-container jcode-center jcode-padding jcode-orange" style="width:50%">50%</div>
+        </div>
+
+        <p>Bounce Rate</p>
+        <div class="jcode-grey">
+            <div class="jcode-container jcode-center jcode-padding jcode-red" style="width:75%">75%</div>
+        </div>
+    </div>
+    <hr>
+
+    <div class="jcode-container">
+        <h5>Countries</h5>
+        <table class="jcode-table jcode-striped jcode-bordered jcode-border jcode-hoverable jcode-white">
+            <tr>
+                <td>Sri Lanka</td>
+                <td>65%</td>
+            </tr>
+            <tr>
+                <td>UK</td>
+                <td>15.7%</td>
+            </tr>
+            <tr>
+                <td>Russia</td>
+                <td>5.6%</td>
+            </tr>
+            <tr>
+                <td>Spain</td>
+                <td>2.1%</td>
+            </tr>
+            <tr>
+                <td>India</td>
+                <td>1.9%</td>
+            </tr>
+            <tr>
+                <td>France</td>
+                <td>1.5%</td>
+            </tr>
+        </table><br>
+        <button class="jcode-button jcode-dark-grey">More Countries  <i class="fa fa-arrow-right"></i></button>
+    </div>
+    <hr>
+
+    <br>
+    <div class="jcode-container jcode-dark-grey ">
+        <div class="jcode-row">
+            <div class="jcode-container jcode-third">
+                <h5 class="jcode-bottombar jcode-border-green">Demographic</h5>
+                <p>Language</p>
+                <p>Country</p>
+                <p>City</p>
+            </div>
+            <div class="jcode-container jcode-third">
+                <h5 class="jcode-bottombar jcode-border-red">System</h5>
+                <p>Browser</p>
+                <p>OS</p>
+                <p>More</p>
+            </div>
+            <div class="jcode-container jcode-third">
+                <h5 class="jcode-bottombar jcode-border-orange">Target</h5>
+                <p>Users</p>
+                <p>Active</p>
+                <p>Geo</p>
+                <p>Interests</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+</body>
+</html>
